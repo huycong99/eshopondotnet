@@ -1,0 +1,18 @@
+services:
+  apigateways-api:
+    image: ${DOCKER_REGISTRY:-eshopondotnet}/apigateways.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: ApiGateWays/Bfb/ApiGateWays.API/Dockerfile
+  
+  ms-order-api:
+    image: ${DOCKER_REGISTRY:-eshopondotnet}/ms-order.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/ms-order/Order.API/Dockerfile
+
+  ms-product-api:
+    image: ${DOCKER_REGISTRY:-eshopondotnet}/ms-product.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/ms-Product/Product.API/Dockerfile
