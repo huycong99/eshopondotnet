@@ -1,20 +1,4 @@
-resources:
-- name: source-code
-  type: git
-  source:
-    uri: https://github.com/huycong99/eshopondotnet.git
-    branch: master
-    fetch_tags: true
-    disable_git_lfs: true
 
-jobs:
-- name: build
-  plan:
-  - get: source-code
-    trigger: true
-    on_success:
-      task: build
-      config:
         platform: linux
         image_resource:
           type: docker-image
