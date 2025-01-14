@@ -1,0 +1,19 @@
+task:
+  name: build-app
+  config:
+    platform: linux
+    image_resource:
+      type: registry-image
+      source:
+        repository: mcr.microsoft.com/dotnet/sdk
+        tag: '8.0'
+    inputs:
+      - name: source-code
+
+    run:
+      run:
+          path: sh
+          args:
+          - -exec
+          - |
+            dotnet build ./source-code/src/eShopOnDotNet.sln
