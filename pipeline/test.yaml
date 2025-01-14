@@ -7,8 +7,6 @@
             tag: '8.0'
         inputs: 
         - name: source-code
-        output:
-        - name: source-code
         run:
           path: sh
           args:
