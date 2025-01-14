@@ -1,17 +1,31 @@
-task:
-  name: build-app
-  config:
-    platform: linux
-    image_resource:
-      type: registry-image
-      source:
-        repository: mcr.microsoft.com/dotnet/sdk
-        tag: '8.0'
-    inputs:
-      - name: source-code
+resources:
+- name: source-code
+  type: git
+  source:
+    uri: https://github.com/huycong99/eshopondotnet.git
+    branch: master
+    fetch_tags: true
+    disable_git_lfs: true
 
-    run:
-      run:
+jobs:
+- name: build
+  plan:
+  - get: source-code
+    trigger: true
+    on_success:
+      task: build
+      config:
+        platform: linux
+        image_resource:
+          type: docker-image
+          source: 
+            repository: mcr.microsoft.com/dotnet/sdk
+            tag: '8.0'
+        inputs: 
+        - name: source-code
+        output:
+        - name: source-code
+        run:
           path: sh
           args:
           - -exec
