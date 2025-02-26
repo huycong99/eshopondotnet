@@ -8,7 +8,7 @@ namespace User.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.AddCustomDbContext();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -30,7 +30,16 @@ namespace User.API
 
             app.MapControllers();
 
-            app.Run();
+            try
+            {
+                app.AddCustomMigration();
+
+                app.Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }
