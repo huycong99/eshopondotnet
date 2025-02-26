@@ -26,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\dotnet\dotnet-app\src\Services\ms-product\Product.EF\Product.EF.csproj" />
     <ProjectReference Include="..\Product.EF\Product.EF.csproj" />
   </ItemGroup>
 
