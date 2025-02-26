@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.API", "Services\ms-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "Services\ms-order\Order.API\Order.API.csproj", "{348664B1-5290-4763-88FD-85DE82D262EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.EF", "Services\ms-product\Product.EF\Product.EF.csproj", "{FD6CE646-01D7-457D-BB86-6F80E64C5386}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{348664B1-5290-4763-88FD-85DE82D262EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{348664B1-5290-4763-88FD-85DE82D262EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{348664B1-5290-4763-88FD-85DE82D262EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD6CE646-01D7-457D-BB86-6F80E64C5386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6CE646-01D7-457D-BB86-6F80E64C5386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6CE646-01D7-457D-BB86-6F80E64C5386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6CE646-01D7-457D-BB86-6F80E64C5386}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +60,6 @@ Global
 		{7B53855D-3D97-4E20-933B-F785833409F9} = {CEE0666D-7775-4D5C-AB83-12156B98B348}
 		{DF64F718-DE51-4859-AB15-DB2D9314D51D} = {7B53855D-3D97-4E20-933B-F785833409F9}
 		{348664B1-5290-4763-88FD-85DE82D262EF} = {C625D0B3-6B86-4FE6-9806-40BC6ABA86CC}
+		{FD6CE646-01D7-457D-BB86-6F80E64C5386} = {7B53855D-3D97-4E20-933B-F785833409F9}
 	EndGlobalSection
 EndGlobal
